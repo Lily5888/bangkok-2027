@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>曼谷家族奢華 5 日之旅 🇹🇭</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons for beautiful tab icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #FDFBF7; /* Wabi-sabi Creamy White */
+            color: #4A3E3D;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .active-tab {
+            color: #C09853; /* Thai Gold */
+            font-weight: 700;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(192, 152, 83, 0.15);
+        }
+    </style>
+</head>
+<body class="pb-24">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-[#FAF6EE] border-b border-[#EADFC9] px-6 py-4 flex items-center justify-between shadow-sm">
+        <div>
+            <h1 class="text-xl font-bold text-[#8C6D38] tracking-wide">曼谷家族奢華 5 日遊</h1>
+            <p class="text-xs text-gray-500">2027/02/07 - 2027/02/11</p>
+        </div>
+        <span class="bg-[#EADFC9] text-[#8C6D38] text-xs font-semibold px-2.5 py-1 rounded-full">6人家族行</span>
+    </header>
+
+    <!-- Main Content Containers -->
+    <main class="max-w-md mx-auto px-4 py-6">
+        
+        <!-- Tab 1: 行程 (Default) -->
+        <section id="content-itinerary" class="tab-content">
+            <!-- Day Selector -->
+            <div class="flex space-x-2 overflow-x-auto pb-4 mb-4 scrollbar-hide">
+                <button onclick="switchDay(1)" id="day-btn-1" class="day-btn shrink-0 bg-[#C09853] text-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Day 1 (2/7)</button>
+                <button onclick="switchDay(2)" id="day-btn-2" class="day-btn shrink-0 bg-[#F3ECE0] text-gray-700 px-4 py-2 rounded-full text-sm font-medium">Day 2 (2/8)</button>
+                <button onclick="switchDay(3)" id="day-btn-3" class="day-btn shrink-0 bg-[#F3ECE0] text-gray-700 px-4 py-2 rounded-full text-sm font-medium">Day 3 (2/9)</button>
+                <button onclick="switchDay(4)" id="day-btn-4" class="day-btn shrink-0 bg-[#F3ECE0] text-gray-700 px-4 py-2 rounded-full text-sm font-medium">Day 4 (2/10)</button>
+                <button onclick="switchDay(5)" id="day-btn-5" class="day-btn shrink-0 bg-[#F3ECE0] text-gray-700 px-4 py-2 rounded-full text-sm font-medium">Day 5 (2/11)</button>
+            </div>
+
+            <!-- DAY 1 CONTENT -->
+            <div id="day-panel-1" class="day-panel space-y-4">
+                <div class="glass-card rounded-2xl p-4 shadow-sm border-l-4 border-[#C09853]">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold text-[#C09853] bg-[#FAF6EE] px-2 py-1 rounded">19:30</span>
+                            <h3 class="font-bold text-lg mt-1">✈️ 抵達曼谷廊曼機場 (DMK)</h3>
+                        </div>
+                        <a href="https://maps.app.goo.gl/96B8y1Vco6j7m32y8" target="_blank" class="bg-[#C09853] text-white p-1.5 rounded-full shadow-sm hover:bg-[#A88142]"><i data-lucide="map-pin" class="w-4 h-4"></i></a>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">辦理入境、提取行李。出關後尋找預約好的 6 人包車接送牌面。</p>
+                </div>
+                <div class="glass-card rounded-2xl p-4 shadow-sm border-l-4 border-gray-300">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold text-gray-500 bg-gray-100 px-2 py-1 rounded">21:00</span>
+                            <h3 class="font-bold text-lg mt-1">🏨 飯店 Check-in 休息</h3>
+                        </div>
+                        <!-- 預設推薦飯店 Ratchadamri 導航 -->
+                        <a href="https://maps.app.goo.gl/k98bXzV8p7kXmN6x9" target="_blank" class="bg-[#C09853] text-white p-1.5 rounded-full shadow-sm hover:bg-[#A88142]"><i data-lucide="map-pin" class="w-4 h-4"></i></a>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">建議入住 Siam / Chit Lom 區域飯店（推薦 Grande Centre Point Ratchadamri ），長輩先在房間稍作休息，年輕組準備出發覓食。</p>
+                </div>
+                <div class="glass-card rounded-2xl p-4 shadow-sm border-l-4 border-[#C09853]">
+                    <span class="text-xs font-bold text-[#C09853] bg-[#FAF6EE] px-2 py-1 rounded">21:30 - 23:00</span>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg mt-1">🍜 朱拉隆功宵夜：Jeh O Chula</h3>
+                        <a href="https://maps.app.goo.gl/B46BwTzWcWeC16W88" target="_blank" class="bg-[#C09853] text-white p-1.5 rounded-full shadow-sm hover:bg-[#A88142]"><i data-lucide="map-pin" class="w-4 h-4"></i></a>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">朝聖超紅海鮮媽媽麵。建議先在 Klook 購買快速通關免排隊，或由年輕人先行前往抽號碼牌。</p>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                        <span class="bg-[#FAF6EE] text-[#8C6D38] text-xs px-2.5 py-1 rounded">PUNGDET 烤麵包</span>
+                        <span class="bg-[#FAF6EE] text-[#8C6D38] text-xs px-2.5 py-1 rounded">HAAB 炭火點心</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 2 CONTENT -->
+            <div id="day-panel-2" class="day-panel space-y-4 hidden">
+                <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 flex items-center space-x-2">
+                    <i data-lucide="car" class="text-[#C09853] w-5 h-5"></i>
+                    <p class="text-xs text-amber-800 font-medium">本日安排全程 10 小時專車包車，長輩免走路最省力！</p>
+                </div>
+                <div class="glass-card rounded-2xl p-4 shadow-sm border-l-4 border-[#C09853]">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold text-[#C09853] bg-[#FAF6EE] px-2 py-1 rounded">08:30 - 12:00</span>
+                            <h3 class="font-bold text-lg mt-1">🛶 丹嫩沙多水上市場</h3>
+                        </div>
+                        <a href="https://maps.app.goo.gl/tWpS4xXb1BfHpxp5A" target="_blank" class="bg-[#C09853] text-white p-1.5 rounded-full shadow-sm hover:bg-[#A88142]"><i data-lucide="map-pin" class="w-4 h-4"></i></a>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">體驗經典的手搖船，在河道中感受水上商販的熱情。對長輩來說既新奇又不用耗費體力。</p>
+                </div>
+                <div class="glass-card rounded-2xl p-4 shadow-sm border-l-4 border-[#C09853]">
+                    <span class="text-xs font-bold text-[#C09853] bg-[#FAF6EE] px-2 py-1 rounded">12:30 - 14:00</span>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg mt-1">🚂 美功鐵道市場</h3>
+                        <a href="https://maps.app.goo.gl/d618g5AWhnFw8n7m9" target="_blank" class="bg-[#C09853] text-white p-1.5 rounded-full shadow-sm hover:bg-[#A88142]"><i data-lucide="map-pin" class="w-4 h-4"></i></a>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">午餐在鐵道旁吃在地街頭美食與泰式小吃，14:30 火車會進站，觀賞攤販秒收棚的經典奇景。</p>
+                </div>
+                <div class="glass-card rounded-2xl p-4 shadow-sm border-l-4 border-[#C09853]">
+                    <span class="text-xs font-bold text-[#C09853] bg-[#FAF6EE] px-2 py-1 rounded">14:30 - 16:00</span>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg mt-1">☕ After the Rain Coffee & Gallery</h3>
+                        <a href="https://maps.app.goo.gl/cWw5F8pGis73m6bXA" target="_blank" class="bg-[#C09853] text-white p-1.5 rounded-full shadow-sm hover:bg-[#A88142]"><i data-lucide="map-pin" class="w-4 h-4"></i></a>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">綠意盎然的熱帶運河咖啡廳。長輩可在室內吹冷氣悠閒喝咖啡，年輕人可去小運河體驗手搖划船拍照。</p>
+                </div>
+                <div class="glass-card rounded-2xl p-4 shadow-sm border-l-4 border-[#C09853]">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold text-[#C09853] bg-[#FAF6EE] px-2 py-1 rounded">18:30</span>
+                            <h3 class="font-bold text-lg mt-1">🍽️ 晚餐：Savoey Seafood (上味泰)</h3>
+                        </div>
+                        <a href="https://maps.app.goo.gl/pLhCgYw7M1C7K3mSA" target="_blank" class="bg-[#C09853] text-white p-1.5 rounded-full shadow-sm hover:bg-[#A88142]"><i data-lucide="map-pin" class="w-4 h-4"></i></a>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">回市區後享用超人氣上味泰餐館（推薦 Terminal 21 分店或 Mercure 鄰近分店），招牌咖哩螃蟹、新鮮泰國蝦，環境寬敞有冷氣，非常迎合家人口味。</p>
+                </div>
+            </div>
+
+            <!-- DAY 3 CONTENT -->
+            <div id="day-panel-3" class="day-panel space-y-4 hidden">
+                <div class="glass-card rounded-2xl p-4 shadow-sm border-l-4 border-[#C09853]">
+                    <span class="text-xs font-bold text-[#C09853] bg-[#FAF6EE] px-2 py-1 rounded">09:00 - 11:30</span>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg mt-1">🥻 Sense of Thai 泰服體驗 & 鄭王廟</h3>
+                        <div class="flex space-x-1.5">
+                            <a href="https://maps.app.goo.gl/dZgWh58u2Jk89qYv6" target="_blank" title="Sense of Thai" class="bg-[#8C6D38] text-white p-1.5 rounded-full shadow-sm"><i data-lucide="scissors" class="w-4 h-4"></i></a>
+                            <a href="https://maps.app.goo.gl/2L4JHeL42S2K9yT79" target="_blank" title="鄭王廟" class="bg-[#C09853] text-white p-1.5 rounded-full shadow-sm"><i data-lucide="map-pin" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">精美妝髮與泰服換裝（Sense of Thai 位於 Tha Maharaj 商場內），直接到隔壁鄭王廟拍攝全家福大片。拍完立刻歸還泰服，換回輕便私服繼續下午的行程，完全不累！</p>
+                </div>
+                <div class="glass-card rounded-2xl p-4 shadow-sm border-l-4 border-[#C09853]">
+                    <span class="text-xs font-bold text-[#C09853] bg-[#FAF6EE] px-2 py-1 rounded">12:00 - 17:30</span>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg mt-1">🛍️ ICONSIAM 暹羅天地（吹冷氣休息）</h3>
+                        <a href="https://maps.app.goo.gl/r6aX7A6VpE2EwEaVA" target="_blank" class="bg-[#C09853] text-white p-1.5 rounded-full shadow-sm hover:bg-[#A88142]"><i data-lucide="map-pin" class="w-4 h-4"></i></a>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">搭接駁船前往。可在一樓室內水上市場（SookSiam）享用在地小吃，下午朝聖全球最高 % Arabica 咖啡，喝 Karun 金箔泰奶。</p>
+                </div>
+                <div class="glass-card rounded-2xl p-4 shadow-sm border-l-4 border-[#C09853]">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold text-[#C09853] bg-[#FAF6EE] px-2 py-1 rounded">18:00 - 20:30</span>
+                            <h3 class="font-bold text-lg mt-1">🍽️ 晚餐：Le Du Kaan</h3>
+                        </div>
+                        <a href="https://maps.app.goo.gl/w6XbK3Yp7jK89MxaA" target="_blank" class="bg-[#C09853] text-white p-1.5 rounded-full shadow-sm hover:bg-[#A88142]"><i data-lucide="map-pin" class="w-4 h-4"></i></a>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">在昭披耶河畔一邊欣賞亮燈後的鄭王廟夜景，一邊享用米其林星級 Le Du 團隊的現代泰式美饌，視覺與味覺的雙重饗宴。</p>
+                </div>
+            </div>
+
+            <!-- DAY 4 CONTENT -->
+            <div id="day-panel-4" class="day-panel space-y-4 hidden">
+                <div class="glass-card rounded-2xl p-4 shadow-sm border-l-4 border-[#C09853]">
+                    <span class="text-xs font-bold text-[#C09853] bg-[#FAF6EE] px-2 py-1 rounded">09:30 - 10:30</span>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg mt-1">🍳 早餐：安樂園 On Lok Yun</h3>
+                        <a href="https://maps.app.goo.gl/Z2XbY3Vp7jK89NxaA" target="_blank" class="bg-[#C09853] text-white p-1.5 rounded-full shadow-sm hover:bg-[#A88142]"><i data-lucide="map-pin" class="w-4 h-4"></i></a>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">近百年的曼谷復古早午餐店，品嚐咖椰吐司、泰式西點與熱泰奶，體驗傳統復古的情懷。</p>
+                </div>
+                <div class="glass-card rounded-2xl p-4 shadow-sm border-l-4 border-[#C09853]">
+                    <span class="text-xs font-bold text-[#C09853] bg-[#FAF6EE] px-2 py-1 rounded">11:00 - 12:30</span>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg mt-1">🦀 午餐：Chula 50 kitchen</h3>
+                        <a href="https://maps.app.goo.gl/8bXmK3Yp7jK89PxaA" target="_blank" class="bg-[#C09853] text-white p-1.5 rounded-full shadow-sm hover:bg-[#A88142]"><i data-lucide="map-pin" class="w-4 h-4"></i></a>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">平價高 CP 值的美味滑蛋蟹肉飯，滿滿蟹肉讓人欲罷不能！</p>
+                </div>
+                <div class="glass-card rounded-2xl p-4 shadow-sm border-l-4 border-[#C09853]">
+                    <span class="text-xs font-bold text-[#C09853] bg-[#FAF6EE] px-2 py-1 rounded">13:00 - 15:00</span>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg mt-1">🙏 四面佛參拜 & CentralWorld 購物</h3>
+                        <div class="flex space-x-1.5">
+                            <a href="https://maps.app.goo.gl/S2XbY3Vp7jK89QxaA" target="_blank" title="四面佛" class="bg-[#8C6D38] text-white p-1.5 rounded-full shadow-sm"><i data-lucide="sparkles" class="w-4 h-4"></i></a>
+                            <a href="https://maps.app.goo.gl/3bXmK3Yp7jK89RxaA" target="_blank" title="CentralWorld" class="bg-[#C09853] text-white p-1.5 rounded-full shadow-sm"><i data-lucide="map-pin" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">市中心四面佛參拜。隨後進入 CentralWorld 吹冷氣，採買伴手禮，甜點享用 After You 蜜糖吐司與泰奶雪花冰。</p>
+                </div>
+                <div class="glass-card rounded-2xl p-4 shadow-sm border-l-4 border-[#C09853]">
+                    <span class="text-xs font-bold text-[#C09853] bg-[#FAF6EE] px-2 py-1 rounded">15:30 - 17:30</span>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg mt-1">💆‍♀️ Oasis Spa 頂級按摩</h3>
+                        <a href="https://maps.app.goo.gl/L2XbY3Vp7jK89SxaA" target="_blank" class="bg-[#C09853] text-white p-1.5 rounded-full shadow-sm hover:bg-[#A88142]"><i data-lucide="map-pin" class="w-4 h-4"></i></a>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">安排在綠意滿滿的奢華蘭納別墅中（推薦位於 Sukhumvit 31 的分店），享受 2 小時極致療癒、尊榮的頂級芳療與按摩，幫爸媽完全釋放疲勞。</p>
+                </div>
+                <div class="glass-card rounded-2xl p-4 shadow-sm border-l-4 border-[#C09853]">
+                    <span class="text-xs font-bold text-[#C09853] bg-[#FAF6EE] px-2 py-1 rounded">18:00 - 19:30</span>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg mt-1">🌆 King Power Mahanakhon 觀景台</h3>
+                        <a href="https://maps.app.goo.gl/yH8zC6vXgN4fQxWn8" target="_blank" class="bg-[#C09853] text-white p-1.5 rounded-full shadow-sm hover:bg-[#A88142]"><i data-lucide="map-pin" class="w-4 h-4"></i></a>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">登上 78 樓俯瞰夕陽西下與亮燈的曼谷絕美夜景，站在天空玻璃步道上合影留念。</p>
+                </div>
+                <div class="glass-card rounded-2xl p-4 shadow-sm border-l-4 border-[#C09853]">
+                    <span class="text-xs font-bold text-[#C09853] bg-[#FAF6EE] px-2 py-1 rounded">20:00 - 22:00</span>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg mt-1">🦀 晚餐：Somsak Claypot Crab</h3>
+                        <a href="https://maps.app.goo.gl/W2XbY3Vp7jK89TxaA" target="_blank" class="bg-[#C09853] text-white p-1.5 rounded-full shadow-sm hover:bg-[#A88142]"><i data-lucide="map-pin" class="w-4 h-4"></i></a>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">曼谷最厲害的蟹黃粉絲煲。粉絲吸滿蟹黃鮮味與黑胡椒香，作為這趟曼谷行完美的結尾晚餐。</p>
+                </div>
+            </div>
+
+            <!-- DAY 5 CONTENT -->
+            <div id="day-panel-5" class="day-panel space-y-4 hidden">
+                <div class="glass-card rounded-2xl p-4 shadow-sm border-l-4 border-red-400">
+                    <span class="text-xs font-bold text-red-500 bg-red-50 px-2 py-1 rounded">03:15</span>
+                    <h3 class="font-bold text-lg mt-1">🚕 辦理退房、前往廊曼機場</h3>
+                    <p class="text-sm text-gray-600 mt-1">由於回程是清晨 06:15 班機，建議 03:15 辦退房。預約好的專車大包車將在飯店大廳準時接送。</p>
+                </div>
+                <div class="glass-card rounded-2xl p-4 shadow-sm border-l-4 border-gray-400">
+                    <span class="text-xs font-bold text-gray-500 bg-gray-100 px-2 py-1 rounded">06:15 - 11:10</span>
+                    <h3 class="font-bold text-lg mt-1">✈️ 搭機返台 SL 0394</h3>
+                    <p class="text-sm text-gray-600 mt-1">帶著滿滿的家族美照與美好回憶返回台灣！</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 2: 交通與住宿 -->
+        <section id="content-transport" class="tab-content hidden space-y-6">
+            <h2 class="text-xl font-bold text-[#8C6D38] border-b border-[#EADFC9] pb-2">✈️ 來回航班資訊</h2>
+            <div class="glass-card rounded-2xl p-4 shadow-sm space-y-3">
+                <div class="flex justify-between items-center pb-2 border-b border-gray-100">
+                    <span class="font-bold text-[#C09853]">去程 02/07 (週日)</span>
+                    <span class="text-xs bg-amber-50 text-amber-800 px-2 py-0.5 rounded">SL 0397</span>
+                </div>
+                <div class="grid grid-cols-3 text-center items-center">
+                    <div>
+                        <p class="text-lg font-bold">TPE 桃園</p>
+                        <p class="text-xs text-gray-500">16:40</p>
+                    </div>
+                    <div class="text-xs text-gray-400">➔ 3h 50m ➔</div>
+                    <div>
+                        <p class="text-lg font-bold">DMK 廊曼</p>
+                        <p class="text-xs text-gray-500">19:30</p>
+                    </div>
+                </div>
+            </div>
+            <div class="glass-card rounded-2xl p-4 shadow-sm space-y-3">
+                <div class="flex justify-between items-center pb-2 border-b border-gray-100">
+                    <span class="font-bold text-red-500">回程 02/11 (週四)</span>
+                    <span class="text-xs bg-red-50 text-red-600 px-2 py-0.5 rounded">SL 0394</span>
+                </div>
+                <div class="grid grid-cols-3 text-center items-center">
+                    <div>
+                        <p class="text-lg font-bold">DMK 廊曼</p>
+                        <p class="text-xs text-gray-500">06:15</p>
+                    </div>
+                    <div class="text-xs text-gray-400">➔ 3h 55m ➔</div>
+                    <div>
+                        <p class="text-lg font-bold">TPE 桃園</p>
+                        <p class="text-xs text-gray-500">11:10</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-xl font-bold text-[#8C6D38] border-b border-[#EADFC9] pb-2 mt-6">🚗 交通工具攻略</h2>
+            <div class="space-y-3">
+                <div class="glass-card rounded-2xl p-4 shadow-sm">
+                    <h3 class="font-bold text-base">Day 2 郊區包車 (10小時)</h3>
+                    <p class="text-sm text-gray-600 mt-1">車型：Toyota Commuter 10人座。費用約 3,500 ~ 4,000 THB。長輩可全程睡車上，行李與戰利品放車上。</p>
+                </div>
+                <div class="glass-card rounded-2xl p-4 shadow-sm">
+                    <h3 class="font-bold text-base">市區大眾運輸 (BTS / MRT)</h3>
+                    <p class="text-sm text-gray-600 mt-1">適合尖峰塞車時段 (17:00-19:30) 使用。可精準掌控時間，避免長輩塞在車陣中憋尿或不舒服。</p>
+                </div>
+                <div class="glass-card rounded-2xl p-4 shadow-sm">
+                    <h3 class="font-bold text-base">手機叫車 (Grab / Bolt)</h3>
+                    <p class="text-sm text-gray-600 mt-1">離峰或去捷運沒直達處時使用，建議下載 Grab 並綁定信用卡，6個人可直接叫一台大車(SUV/Van)。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 3: 行李與實用 -->
+        <section id="content-utility" class="tab-content hidden space-y-6">
+            <h2 class="text-xl font-bold text-[#8C6D38] border-b border-[#EADFC9] pb-2">🧳 建議行李清單</h2>
+            <div class="glass-card rounded-2xl p-4 shadow-sm space-y-2 text-sm">
+                <label class="flex items-center space-x-3 py-1">
+                    <input type="checkbox" class="w-4 h-4 text-[#C09853] focus:ring-[#C09853] rounded">
+                    <span>護照、泰簽或免簽確認文件</span>
+                </label>
+                <label class="flex items-center space-x-3 py-1">
+                    <input type="checkbox" class="w-4 h-4 text-[#C09853] rounded">
+                    <span>泰銖現金 (泰國入境規定每人需攜帶等值 20,000 泰銖的現金)</span>
+                </label>
+                <label class="flex items-center space-x-3 py-1">
+                    <input type="checkbox" class="w-4 h-4 text-[#C09853] rounded">
+                    <span>輕便防曬衣物、墨鏡、陽傘</span>
+                </label>
+                <label class="flex items-center space-x-3 py-1">
+                    <input type="checkbox" class="w-4 h-4 text-[#C09853] rounded">
+                    <span>好走的平底涼鞋或球鞋（鄭王廟拍照需要）</span>
+                </label>
+                <label class="flex items-center space-x-3 py-1">
+                    <input type="checkbox" class="w-4 h-4 text-[#C09853] rounded">
+                    <span>個人常用藥品、防蚊液、腸胃藥（必帶！）</span>
+                </label>
+                <label class="flex items-center space-x-3 py-1">
+                    <input type="checkbox" class="w-4 h-4 text-[#C09853] rounded">
+                    <span>手機防水袋、行動電源</span>
+                </label>
+            </div>
+
+            <h2 class="text-xl font-bold text-[#8C6D38] border-b border-[#EADFC9] pb-2 mt-6">💡 曼谷實用資訊</h2>
+            <div class="space-y-3">
+                <div class="glass-card rounded-2xl p-4 shadow-sm">
+                    <h3 class="font-bold">🌐 網卡與通訊</h3>
+                    <p class="text-sm text-gray-600 mt-1">建議每人在台灣先買好 TrueMove 或 AIS 的 5G 上網吃到飽卡，網路穩定、網速流暢。</p>
+                </div>
+                <div class="glass-card rounded-2xl p-4 shadow-sm">
+                    <h3 class="font-bold">💵 換匯小技巧</h3>
+                    <p class="text-sm text-gray-600 mt-1">台灣銀行先換少量泰銖（支付落地第一天的車資與小費）。大筆金額帶台幣或美金到曼谷當地的 SuperRich 兌換，匯率最好。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 4: 預算分配 -->
+        <section id="content-budget" class="tab-content hidden space-y-6">
+            <h2 class="text-xl font-bold text-[#8C6D38] border-b border-[#EADFC9] pb-2">💰 預算估算 (6人總計)</h2>
+            <div class="glass-card rounded-2xl p-4 shadow-sm">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">🚗 機場接送與郊區包車</span>
+                        <span class="font-bold">約 6,500 THB</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">🛶 景點門票與泰服體驗</span>
+                        <span class="font-bold">約 12,500 THB</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">💆‍♀️ Oasis Spa 頂級按摩</span>
+                        <span class="font-bold">約 12,000 THB</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">🍽️ 5日精緻餐飲預算</span>
+                        <span class="font-bold">約 22,000 THB</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">🚇 市區捷運與零星叫車</span>
+                        <span class="font-bold">約 3,000 THB</span>
+                    </div>
+                    <hr class="border-[#EADFC9]">
+                    <div class="flex justify-between items-center text-[#8C6D38] text-lg font-bold">
+                        <span>總計 (不含機票住宿)</span>
+                        <span>約 56,000 THB</span>
+                    </div>
+                    <p class="text-xs text-gray-400 text-right">※ 換算每人約 9,300 泰銖，預算極其充沛！</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="fixed bottom-0 left-0 right-0 z-50 bg-[#FAF6EE] border-t border-[#EADFC9] py-2 shadow-lg max-w-md mx-auto">
+        <div class="flex justify-around items-center">
+            <button onclick="switchTab('itinerary')" id="nav-itinerary" class="flex flex-col items-center justify-center w-16 text-xs text-gray-400 active-tab">
+                <i data-lucide="calendar" class="w-5 h-5 mb-1"></i>
+                <span>每日行程</span>
+            </button>
+            <button onclick="switchTab('transport')" id="nav-transport" class="flex flex-col items-center justify-center w-16 text-xs text-gray-400">
+                <i data-lucide="plane-takeoff" class="w-5 h-5 mb-1"></i>
+                <span>交通住宿</span>
+            </button>
+            <button onclick="switchTab('utility')" id="nav-utility" class="flex flex-col items-center justify-center w-16 text-xs text-gray-400">
+                <i data-lucide="briefcase" class="w-5 h-5 mb-1"></i>
+                <span>行李實用</span>
+            </button>
+            <button onclick="switchTab('budget')" id="nav-budget" class="flex flex-col items-center justify-center w-16 text-xs text-gray-400">
+                <i data-lucide="wallet" class="w-5 h-5 mb-1"></i>
+                <span>預算明細</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- JavaScript code -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Switch Main Tabs
+        function switchTab(tabId) {
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            // Show selected tab content
+            document.getElementById('content-' + tabId).classList.remove('hidden');
+
+            // Reset navigation tab styles
+            const navTabs = ['itinerary', 'transport', 'utility', 'budget'];
+            navTabs.forEach(id => {
+                document.getElementById('nav-' + id).classList.remove('active-tab');
+            });
+            // Apply active style to the selected tab
+            document.getElementById('nav-' + tabId).classList.add('active-tab');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Switch Days inside Itinerary Tab
+        function switchDay(dayNum) {
+            // Hide all day panels
+            document.querySelectorAll('.day-panel').forEach(el => el.classList.add('hidden'));
+            // Show selected day panel
+            document.getElementById('day-panel-' + dayNum).classList.remove('hidden');
+
+            // Reset day buttons style
+            document.querySelectorAll('.day-btn').forEach(btn => {
+                btn.classList.remove('bg-[#C09853]', 'text-white');
+                btn.classList.add('bg-[#F3ECE0]', 'text-gray-700');
+            });
+            // Highlight active day button
+            const activeBtn = document.getElementById('day-btn-' + dayNum);
+            activeBtn.classList.remove('bg-[#F3ECE0]', 'text-gray-700');
+            activeBtn.classList.add('bg-[#C09853]', 'text-white');
+        }
+    </script>
+</body>
+</html>
